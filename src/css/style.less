@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 455175 */
-  src: url('//at.alicdn.com/t/font_455175_fza4yuhfbc5wmi.eot');
-  src: url('//at.alicdn.com/t/font_455175_fza4yuhfbc5wmi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_455175_fza4yuhfbc5wmi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_455175_fza4yuhfbc5wmi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_455175_fza4yuhfbc5wmi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_455175_zpyyfdgs0m3x47vi.eot');
+  src: url('//at.alicdn.com/t/font_455175_zpyyfdgs0m3x47vi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_455175_zpyyfdgs0m3x47vi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_455175_zpyyfdgs0m3x47vi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_455175_zpyyfdgs0m3x47vi.svg#iconfont') format('svg');
 }
 .iconfont{
   font-family:"iconfont" !important;
@@ -65,6 +65,28 @@ body{
   }
 }
 
+@keyframes nav {
+  0% {
+    opacity: 0
+  }
+
+  25% {
+    opacity: .25
+  }
+
+  50% {
+    opacity: .5
+  }
+
+  75% {
+    opacity: .75
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
 .logo{
   position: fixed;
   left: 50%;
@@ -72,8 +94,62 @@ body{
   transform: translate(-50%, -50%);
   animation: index-loading-logo 8s;
   animation-fill-mode: forwards;
-  z-index: 9999;
+  z-index: 10000;
   margin: 0;
+}
+.nav{
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  z-index: 9999;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  cursor: pointer;
+  background: #f1f1f1;
+  .iconfont{
+    font-size: 26px;
+    color: #333;
+  }
+}
+.qrcode{
+  position: absolute;
+  top: 60px;
+  right: 140px;
+  z-index: 9999;
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  cursor: pointer;
+  &:hover{
+    color: #007ce6;
+    .qrcode-box{
+      opacity: 1;
+    }
+  }
+  .iconfont{
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .qrcode-text{
+    position: relative;
+    z-index: 9999;
+  }
+  .qrcode-box{
+    opacity: 0;
+    transition: all .5s;
+    position: absolute;
+    left: -22px;
+    right: -22px;
+    top: 0;
+    z-index: 9998;
+    padding-top: 45px;
+    background: rgba(255,255,255,.6);
+    text-align: center;
+    padding-bottom: 15px;
+  }
 }
 .slidebox{
   -webkit-transform: translateY(270px);
@@ -508,6 +584,50 @@ body{
       }
     }
   }
+  .footer{
+    height: 70px;
+    line-height: 70px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .gori{
+      width: 45px;
+      height: 13px;
+      display: inline-block;
+      background: url(../images/gori.png) no-repeat;
+      margin-left: 10px;
+    }
+    p{
+      line-height: 70px;
+      margin-bottom: 0;
+      float: left;
+    }
+    .sns{
+      float: right;
+      color: #fff;
+      a{
+        color: #808080;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        display: inline-block;
+        transition: color .5s;
+        border: 1px solid #808080;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 2px;
+        .iconfont{
+          font-size: 16px;
+        }
+        &:hover{
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+  }
 }
 
 #fp-nav ul li {
@@ -590,6 +710,11 @@ body{
     -ms-transform: translate(-50%, -50%) scale(0.585);
     -o-transform: translate(-50%, -50%) scale(0.585);
     transform: translate(-50%, -50%) scale(0.585);
+}
+#fp-nav ul li:hover a.active span{
+  width: 18px;
+  height: 18px;
+  margin: 0;
 }
 #fp-nav ul li:hover a span {
   width: 18px;
