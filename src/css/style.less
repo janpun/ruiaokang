@@ -109,6 +109,60 @@ body{
   }
 }
 
+
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+
+  75% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+}
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+}
+
 .logo{
   position: fixed;
   left: 50%;
@@ -292,6 +346,9 @@ body{
   opacity: 0;
   animation: first-section-opacity 8s;
   animation-fill-mode: forwards;
+  .mobile-slide{
+    display: none;
+  }
   .video{
     position: absolute;
     z-index: -1;
@@ -352,6 +409,33 @@ body{
     background-size: auto 100% !important;
     .video{
       display: none;
+    }
+    .mobile-slide{
+      position: absolute;
+      z-index: -1;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      display: block;
+      img{
+        width: 100%;
+        opacity: 0;
+      }
+      .mobile-slide-1{
+        img{
+          animation:slide1 linear 8s infinite;
+          -webkit-animation:slide1 linear 8s infinite;
+          animation-delay: 5s;
+        }
+      }
+      .mobile-slide-2{
+        img{
+          animation:slide2 8s linear infinite;
+          -webkit-animation:slide2 linear 8s infinite;
+          animation-delay: 13s;
+        }
+      }
     }
     .content{
       .title{
