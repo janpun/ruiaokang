@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>瑞澳康</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -27,11 +27,11 @@
   </div>
   <div id="page">
     <div class="section section-1 active">
-      <!-- <div class="video">
+      <div class="video">
         <video id="video" poster="/images/bg-1.jpg" loop autoplay muted>
           <source src="/video/video.mp4" type='video/mp4'>
         </video>
-      </div> -->
+      </div>
       <div class="cover"></div>
       <div class="content">
         <div class="title slideup">
@@ -143,37 +143,37 @@
         </div>
         <div class="feature">
           <div class="row">
-            <div class="col-md-3 feature-item slidebox">
+            <div class="col-md-3 col-xs-6 feature-item slidebox">
               <h3>尖端技术</h3>
               <h4>HIGH - END TECHNOLOGY</h4>
               <p>中国和澳大利亚两国</p>
               <p>官方政府机构的双重保障</p>
             </div>
-            <div class="col-md-3 feature-item feature-pic feature-pic-1 slidebox">
+            <div class="col-md-3 col-xs-6 feature-item feature-pic feature-pic-1 slidebox">
 
             </div>
-            <div class="col-md-3 feature-item slidebox">
+            <div class="col-md-3 col-xs-6 feature-item slidebox">
               <h3>全程监控</h3>
               <h4>FULL MONITORING</h4>
               <p>从鲜奶采集 封闭运输</p>
               <p>自动混合 无菌灌装</p>
             </div>
-            <div class="col-md-3 feature-item feature-pic feature-pic-2 slidebox">
+            <div class="col-md-3 col-xs-6 feature-item feature-pic feature-pic-2 slidebox">
 
             </div>
-            <div class="col-md-3 feature-item feature-pic feature-pic-3 slidebox">
+            <div class="col-md-3 col-xs-6 feature-item feature-pic feature-pic-3 slidebox">
 
             </div>
-            <div class="col-md-3 feature-item slidebox">
+            <div class="col-md-3 col-xs-6 feature-item slidebox">
               <h3>羊奶优点</h3>
               <h4>ADVANTAGE</h4>
               <p>中国和澳大利亚两国</p>
               <p>官方政府机构的双重保障</p>
             </div>
-            <div class="col-md-3 feature-item feature-pic feature-pic-4 slidebox">
+            <div class="col-md-3 col-xs-6 feature-item feature-pic feature-pic-4 slidebox">
 
             </div>
-            <div class="col-md-3 feature-item slidebox">
+            <div class="col-md-3 col-xs-6 feature-item slidebox">
               <h3>羊奶知识</h3>
               <h4>KNOW HOW</h4>
               <p>在国际营养学界被称为“奶中之王”</p>
@@ -222,10 +222,10 @@
               <div class="contact-msg">
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                       <input type="text" class="form-control" placeholder="您的称呼">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                       <input type="text" class="form-control" placeholder="联系方式">
                     </div>
                   </div>
@@ -277,9 +277,9 @@
             //显示当前内容
             computer_index = swiper.activeIndex;
             $(".product-pic-item").hide();
-            $(".product-pic-item").removeClass("flipInY");
+            $(".product-pic-item").removeClass("fadeIn");
             $(".product-pic-item:eq("+computer_index+")").show();
-            $(".product-pic-item:eq("+computer_index+")").addClass("flipInY");
+            $(".product-pic-item:eq("+computer_index+")").addClass("fadeIn");
           }
       });
   </script>
