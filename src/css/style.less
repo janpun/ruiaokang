@@ -16,6 +16,7 @@
 }
 body{
   background: #232735;
+  font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 
 @keyframes index-loading-logo {
@@ -146,6 +147,7 @@ body{
     position: absolute;
     top: 15px;
     right: 15px;
+    display: none;
   }
 }
 .qrcode{
@@ -190,6 +192,7 @@ body{
     position: absolute;
     top: 15px;
     right: 85px;
+    display: none;
   }
 }
 .slidebox{
@@ -271,12 +274,15 @@ body{
 }
 @media (max-width: 767px){
   .template-title{
+    padding-bottom: 30px;
+    margin-bottom: 10px;
     h2{
       font-size: 20px;
       margin-bottom: 0;
     }
     h3{
       font-size: 13px;
+      display: none;
     }
   }
 }
@@ -343,6 +349,10 @@ body{
 }
 @media (max-width: 767px) {
   .section-1{
+    background-size: auto 100% !important;
+    .video{
+      display: none;
+    }
     .content{
       .title{
         img{
@@ -432,6 +442,9 @@ body{
         font-size: 13px;
         line-height: 28px;
         padding: 0 15px;
+        span{
+          display: none;
+        }
       }
       .about-text{
         height: auto;
@@ -449,14 +462,14 @@ body{
       }
       .about-pic{
         width: 95%;
-        top: 80px;
+        top: 40px;
         img{
           width: 100%;
         }
       }
       .about-detail{
         margin-top: 15px;
-        height: 300px;
+        height: 200px;
       }
     }
   }
@@ -716,9 +729,12 @@ body{
         p{
           font-size: 12px;
           line-height: 20px;
-          -webkit-transform: scale(0.8);
+          -webkit-transform: scale(0.7);
           text-align: center;
         }
+      }
+      .float-right{
+        float: right;
       }
     }
   }
@@ -887,6 +903,21 @@ body{
         .form-group{
           margin-bottom: 10px;
         }
+      }
+    }
+    .footer{
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      p{
+        float: none;
+        line-height: 32px;
+        span{
+          display: none;
+        }
+      }
+      .sns{
+        display: none;
       }
     }
   }
