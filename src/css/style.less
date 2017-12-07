@@ -109,7 +109,6 @@ body{
   }
 }
 
-
 @keyframes slide1 {
   0% {
     opacity: 1;
@@ -137,6 +136,86 @@ body{
   }
 }
 @keyframes slide2 {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+}
+@keyframes slide3 {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+
+@keyframes mobile-slide1 {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+
+  75% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+}
+@keyframes mobile-slide2 {
   0% {
     opacity: 0;
     transform: scale(1, 1);
@@ -349,6 +428,55 @@ body{
   .mobile-slide{
     display: none;
   }
+  .slide{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    img{
+      width: 100%;
+      opacity: 0;
+    }
+    .slide-1{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      img{
+        animation: slide1 linear 8s infinite;
+        -webkit-animation:slide1 linear 8s infinite;
+        animation-delay: 5s;
+      }
+    }
+    .slide-2{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      img{
+        animation: slide2 8s linear infinite;
+        -webkit-animation:slide2 linear 8s infinite;
+        animation-delay: 13s;
+      }
+    }
+    .slide-3{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      img{
+        animation: slide3 8s linear infinite;
+        -webkit-animation:slide3 linear 8s infinite;
+        animation-delay: 19s;
+      }
+    }
+  }
   .video{
     position: absolute;
     z-index: -1;
@@ -429,8 +557,8 @@ body{
         bottom: 0px;
         right: 0px;
         img{
-          animation:slide1 linear 8s infinite;
-          -webkit-animation:slide1 linear 8s infinite;
+          animation:mobile-slide1 linear 8s infinite;
+          -webkit-animation:mobile-slide1 linear 8s infinite;
           animation-delay: 5s;
         }
       }
@@ -441,11 +569,14 @@ body{
         bottom: 0px;
         right: 0px;
         img{
-          animation:slide2 8s linear infinite;
-          -webkit-animation:slide2 linear 8s infinite;
+          animation:mobile-slide2 8s linear infinite;
+          -webkit-animation:mobile-slide2 linear 8s infinite;
           animation-delay: 13s;
         }
       }
+    }
+    .slide{
+      display: none;
     }
     .content{
       .title{
